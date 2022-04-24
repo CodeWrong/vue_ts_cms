@@ -1,7 +1,9 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import { globalRegister } from './global'
-import './service/axios_demo'
+import 'normalize.css'
+
+// import './service/axios_demo'
 import lyRequest from './service'
 
 import router from './router'

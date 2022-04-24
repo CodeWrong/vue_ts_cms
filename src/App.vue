@@ -1,6 +1,5 @@
 <template>
   <div class="app">
-    {{ $store.state.name }}
     <router-link to="/login"></router-link>
     <router-link to="/main"></router-link>
     <router-view></router-view>
@@ -19,11 +18,6 @@ export default defineComponent({
 
 <style lang="less">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  width: 100%;
 }
 </style>

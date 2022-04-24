@@ -52,7 +52,7 @@ export default defineComponent({
     const accountRef = ref<InstanceType<typeof LoginAccount>>()
 
     const handleClick = () => {
-      accountRef.value?.loginAction()
+      accountRef.value?.loginAction(isKeepPassword.value)
     }
 
     return {

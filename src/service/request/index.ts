@@ -57,7 +57,7 @@ class LyRequest {
       }
     )
   }
-  request<T>(config: LyRequestConfig): Promise<T> {
+  request<T>(config: LyRequestConfig<T>): Promise<T> {
     return new Promise((resolve, reject) => {
       // 1.单个请求对请求config的处理
       if (config.interceptors?.requestInterceptor) {
@@ -75,7 +75,7 @@ class LyRequest {
         .then((res) => {
           // 1.单个请求对数据的处理
           if (config.interceptors?.responseInterceptor) {
-            // res = config.interceptors.responseInterceptor(res)
+            res = config.interceptors.responseInterceptor(res)
           }
           // 2.将showLoading设置true, 这样不会影响下一个请求
           this.showLoading = DEAFULT_LOADING
@@ -91,19 +91,19 @@ class LyRequest {
         })
     })
   }
-  get<T>(config: LyRequestConfig): Promise<T> {
+  get<T>(config: LyRequestConfig<T>): Promise<T> {
     return this.request<T>({ ...config, method: 'GET' })
   }
 
-  post<T>(config: LyRequestConfig): Promise<T> {
+  post<T>(config: LyRequestConfig<T>): Promise<T> {
     return this.request<T>({ ...config, method: 'POST' })
   }
 
-  delete<T>(config: LyRequestConfig): Promise<T> {
+  delete<T>(config: LyRequestConfig<T>): Promise<T> {
     return this.request<T>({ ...config, method: 'DELETE' })
   }
 
-  patch<T>(config: LyRequestConfig): Promise<T> {
+  patch<T>(config: LyRequestConfig<T>): Promise<T> {
     return this.request<T>({ ...config, method: 'PATCH' })
   }
 }

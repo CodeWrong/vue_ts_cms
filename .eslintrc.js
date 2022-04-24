@@ -20,4 +20,4 @@ module.exports = {
     '@typescript-eslint/no-empty-function': 'off',
     'prettier/prettier': 'off'
   }
-};
+}

@@ -9,8 +9,11 @@ import {
   ElLink,
   ElRadio,
   ElTabPane,
-  ElTabs
+  ElTabs,
+  ElIcon
 } from 'element-plus'
+
+import { Cellphone, Avatar } from '@element-plus/icons-vue'
 
 const components = [
   ElButton,
@@ -21,7 +24,10 @@ const components = [
   ElTabs,
   ElTabPane,
   ElCheckbox,
-  ElLink
+  ElLink,
+  ElIcon,
+  Cellphone,
+  Avatar
 ]
 
 export default function (app: App): void {

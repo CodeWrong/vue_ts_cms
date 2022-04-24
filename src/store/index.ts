@@ -1,11 +1,11 @@
-import { createStore } from 'vuex';
+import { createStore } from 'vuex'
 
 const store = createStore({
   state: () => {
     return {
       name: 'coderrly'
-    };
+    }
   }
-});
+})
 
-export default store;
+export default store
